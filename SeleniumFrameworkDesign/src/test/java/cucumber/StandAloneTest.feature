@@ -1,0 +1,19 @@
+
+@tag
+Feature: Purchase Order from E-commerce website.
+  I want to use this template for my feature file
+
+	Background:
+	Given I landed on e-commerce page
+
+  @tag2
+  Scenario Outline: Positive Test of submitting order
+    Given Log in with username <name> and password <password>
+    When I add product <ProductName> to cart 
+    And Checkout <ProductName> and submit the order
+    Then confirm confirmation message "THANKYOU FOR THE ORDER."
+
+    Examples: 
+      | name                | password      | ProductName  |
+      | kennyposi@yahoo.com | October3!     | ZARA COAT 3  |
+      

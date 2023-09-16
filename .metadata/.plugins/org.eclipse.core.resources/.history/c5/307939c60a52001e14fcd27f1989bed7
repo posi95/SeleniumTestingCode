@@ -1,0 +1,12 @@
+package rahulshettyacademy.stepdefinitions;
+
+import io.cucumber.java.en.Given;
+
+public class StepDefinitionImp {
+	
+	@Given("I landed on e-commerce page")
+	public void I_landed_on_ecommerce_page(){
+		
+	}
+
+}

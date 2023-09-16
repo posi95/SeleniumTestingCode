@@ -1,0 +1,14 @@
+package rahulshettyacademy.pageobjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class landingpage {
+
+	WebDriver driver;
+	
+	
+	WebElement useremail = driver.findElement(By.id("userEmail"));
+	
+}

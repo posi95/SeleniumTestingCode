@@ -1,0 +1,30 @@
+package rahulshettyacademy.stepdefinitions;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.Given;
+
+public class StepDefinitionImp {
+	WebDriver driver;
+	@Given("I landed on e-commerce page")
+	public void I_landed_on_ecommerce_page(){
+		//code
+		driver = new ChromeDriver();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com/client/");
+	}
+	
+	@Given("^Log in with username (.+) and password (.+)$")
+	public void login_with_username_and_password(String username, String password) {
+		driver.findElement(By.id("userEmail")).sendKeys(username);
+		driver.findElement(By.id("userPassword")).sendKeys(password);
+		driver.findElement(By.id("login")).click();
+	}
+
+}
